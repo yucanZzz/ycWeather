@@ -1,0 +1,134 @@
+@color-base:#eef6fb;
+@color-wt:#ffffff;
+
+body {
+    margin: 0;
+    padding-top: 10px;
+    background-color: @color-base;
+    height: 100vh;
+    margin-top: 10px;
+}
+.App {
+    text-align: center;
+}
+.weather1 {
+    width: 728px;
+    height: 502px;
+    margin: 0 auto;
+    position: relative;
+    background-color: @color-wt;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px #bdbdc5;
+    padding: 5px;
+    border-radius: 5px;
+}
+.weather_content {
+    width: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.weather__today {
+    height: 286px;
+    padding-top: 35px;
+    color: #333339;
+    font-size: 2.0rem;
+    background-color: @color-base;
+    margin-bottom: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    // font-family: "Heiti SC";
+    font-family: "Century Gothic";
+}
+.weather_sub_content {
+    width: 350px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 160px 160px;
+    grid-template-rows: repeat(1, 100%);
+    margin: 0 auto;
+    img{
+        width: 180px;
+        transform: scale(1.1);
+        transition: 0.6s;
+        &:hover {
+            transform: scale(1.2);
+            transition: 0.8s;
+        }
+    } 
+    div {
+        &:nth-child(1) {
+            align-self: center;
+            overflow: hidden;
+        }
+    }
+    div {
+        &:nth-child(2) {
+        text-align: left;
+        line-height: 42px;
+        padding-top: 2px;
+        padding-left: 32px;
+        }
+    }
+}
+.weather__future_container {
+    width: 800px;
+}
+.weather__future {
+    width: 177px;
+    height: 162px;
+    color: #333339;
+    font-size: 1.4rem;
+    margin-right: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: left;
+    overflow: hidden;
+    background-color: @color-base;
+    img {
+        height: 110px;
+        width: 110px;
+    }
+}
+.future_weather_sub_content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 38px 3.5em 38px;
+    font-weight: 200;
+    div:nth-child(2){
+        align-self:center;
+        overflow: hidden;
+    };
+    div:nth-child(3){
+        font-size: 1.9rem;
+        font-weight: 500;
+    }
+
+}
+.spinner-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: @color-wt;
+    color: #5f5f5f;
+    opacity: .95;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 502px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    z-index: 10;
+    img {
+        width: 60px;
+        height: 60px;
+        vertical-align: middle;
+    }
+}
+button {
+    &:focus {
+        background-color: @color-base;
+    }
+}
